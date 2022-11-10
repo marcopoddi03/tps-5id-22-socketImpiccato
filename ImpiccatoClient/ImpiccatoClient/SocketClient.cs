@@ -5,9 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
+using System.Windows.Forms;
 
 
-namespace ClientImpiccato
+namespace ImpiccatoClient
 {
     public class SocketClient
     {
@@ -30,6 +31,7 @@ namespace ClientImpiccato
                 sender.Connect(remoteEP);
                 connected = true;
                 connectedTo = sender.RemoteEndPoint.ToString();
+                MessageBox.Show("CONNESSO AL SERVER!");
             }
             catch (Exception e)
             {
@@ -41,6 +43,20 @@ namespace ClientImpiccato
         {
             byte[] msg = Encoding.ASCII.GetBytes(s);
             int bytesSent = sender.Send(msg);
+        }
+
+        public string ReceiveMsg()
+        {
+            string msgRec;
+            //while (true)
+           // { 
+                byte[] bytes = new byte[1024];
+                int bytesRec = sender.Receive(bytes);
+                msgRec="Echoed test = {0}" +
+                Encoding.ASCII.GetString(bytes, 0, bytesRec);
+
+           // }
+           return msgRec;
         }
 
     }

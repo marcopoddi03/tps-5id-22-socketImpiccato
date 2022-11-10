@@ -1,0 +1,11 @@
+C:\Users\lumia\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\bin\Debug\ImpiccatoClient.exe.config
+C:\Users\lumia\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\bin\Debug\ImpiccatoClient.exe
+C:\Users\lumia\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\bin\Debug\ImpiccatoClient.pdb
+C:\Users\lumia\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.csproj.AssemblyReference.cache
+C:\Users\lumia\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.csproj.SuggestedBindingRedirects.cache
+C:\Users\lumia\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.Properties.Resources.resources
+C:\Users\lumia\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.csproj.GenerateResource.cache
+C:\Users\lumia\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.csproj.CoreCompileInputs.cache
+C:\Users\lumia\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.exe
+C:\Users\lumia\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.pdb
+C:\Users\lumia\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.Form1.resources

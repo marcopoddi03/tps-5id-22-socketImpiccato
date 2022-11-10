@@ -7,14 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace ImpiccatoClient
 {
     public partial class Form1 : Form
     {
+        SocketClient client;
+        Thread t1;
+        int lengthParola;
         public Form1()
         {
             InitializeComponent();
+            client=new SocketClient();
+            client.Connect();
+            //t1 = new Thread(new ThreadStart(client.ReceiveMsg));
+            //t1.Start();
+        }
+
+        private void btnInizia_Click(object sender, EventArgs e)
+        {
+            lengthParola = Convert.ToInt32(client.ReceiveMsg());
+            for (int i = 0; i < lengthParola; i++)
+                label1.Text += "-";
         }
     }
 }
