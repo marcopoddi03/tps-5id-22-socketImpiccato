@@ -26,21 +26,24 @@ namespace ImpiccatoConsoleServer
             Console.WriteLine("lunghezza parola inviata");
             Console.WriteLine("Aspetto lettere");
             //t1.Start();
+            char[] arr=parola.ToCharArray();
+            string par;
             string s;
+            int k;
             while(true)
             {
+                par = "";
                 s = server.ReceiveMsg();
+                par = par + Convert.ToChar(s.ToLower());
                 Console.WriteLine("Controllo se la lettera è presente..");
-                if (parola.Contains(Convert.ToChar(s.ToLower())))
+                k = 0;
+                foreach(char c in arr)
                 {
-                    Console.WriteLine("Presente");
-                    server.SendMsg("1");
+                    if (c == Convert.ToChar(s.ToLower()))
+                        par = par + k.ToString();
+                    k++;
                 }
-                else
-                {
-                    Console.WriteLine("Non presente");
-                    server.SendMsg("2");
-                }
+                server.SendMsg(par);
 
             }
 
