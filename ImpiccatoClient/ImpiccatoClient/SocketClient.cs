@@ -41,8 +41,9 @@ namespace ImpiccatoClient
 
         public void SendMsg(string s)
         {
-            byte[] msg = Encoding.ASCII.GetBytes(s);
+            byte[] msg = Encoding.ASCII.GetBytes(s+"<EOF>");
             int bytesSent = sender.Send(msg);
+            MessageBox.Show("INVIATO!");
         }
 
         public string ReceiveMsg()

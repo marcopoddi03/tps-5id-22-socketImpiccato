@@ -30,6 +30,8 @@
         {
             this.btnInizia = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.domUpLettera = new System.Windows.Forms.DomainUpDown();
+            this.btnInvia = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnInizia
@@ -51,11 +53,56 @@
             this.label1.Size = new System.Drawing.Size(0, 25);
             this.label1.TabIndex = 1;
             // 
+            // domUpLettera
+            // 
+            this.domUpLettera.Items.Add("A");
+            this.domUpLettera.Items.Add("B");
+            this.domUpLettera.Items.Add("C");
+            this.domUpLettera.Items.Add("D");
+            this.domUpLettera.Items.Add("E");
+            this.domUpLettera.Items.Add("F");
+            this.domUpLettera.Items.Add("G");
+            this.domUpLettera.Items.Add("H");
+            this.domUpLettera.Items.Add("I");
+            this.domUpLettera.Items.Add("J");
+            this.domUpLettera.Items.Add("K");
+            this.domUpLettera.Items.Add("L");
+            this.domUpLettera.Items.Add("M");
+            this.domUpLettera.Items.Add("N");
+            this.domUpLettera.Items.Add("O");
+            this.domUpLettera.Items.Add("P");
+            this.domUpLettera.Items.Add("Q");
+            this.domUpLettera.Items.Add("R");
+            this.domUpLettera.Items.Add("S");
+            this.domUpLettera.Items.Add("T");
+            this.domUpLettera.Items.Add("U");
+            this.domUpLettera.Items.Add("V");
+            this.domUpLettera.Items.Add("W");
+            this.domUpLettera.Items.Add("X");
+            this.domUpLettera.Items.Add("Y");
+            this.domUpLettera.Items.Add("Z");
+            this.domUpLettera.Location = new System.Drawing.Point(358, 253);
+            this.domUpLettera.Name = "domUpLettera";
+            this.domUpLettera.Size = new System.Drawing.Size(56, 20);
+            this.domUpLettera.TabIndex = 2;
+            // 
+            // btnInvia
+            // 
+            this.btnInvia.Location = new System.Drawing.Point(430, 243);
+            this.btnInvia.Name = "btnInvia";
+            this.btnInvia.Size = new System.Drawing.Size(75, 36);
+            this.btnInvia.TabIndex = 3;
+            this.btnInvia.Text = "INVIA";
+            this.btnInvia.UseVisualStyleBackColor = true;
+            this.btnInvia.Click += new System.EventHandler(this.btnInvia_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 239);
+            this.ClientSize = new System.Drawing.Size(532, 336);
+            this.Controls.Add(this.btnInvia);
+            this.Controls.Add(this.domUpLettera);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInizia);
             this.Name = "Form1";
@@ -69,6 +116,8 @@
 
         private System.Windows.Forms.Button btnInizia;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DomainUpDown domUpLettera;
+        private System.Windows.Forms.Button btnInvia;
     }
 }
 

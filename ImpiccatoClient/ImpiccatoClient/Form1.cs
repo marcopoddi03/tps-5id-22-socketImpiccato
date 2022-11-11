@@ -30,7 +30,12 @@ namespace ImpiccatoClient
             client.Connect();
             lengthParola = Convert.ToInt32(client.ReceiveMsg());
             for (int i = 0; i < lengthParola; i++)
-                label1.Text += "-";
+                label1.Text += "- ";
+        }
+
+        private void btnInvia_Click(object sender, EventArgs e)
+        {
+            client.SendMsg(domUpLettera.SelectedItem.ToString());
         }
     }
 }
