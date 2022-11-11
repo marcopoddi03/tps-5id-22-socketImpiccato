@@ -43,12 +43,12 @@ namespace ImpiccatoConsoleServer
             byte[] msg = Encoding.ASCII.GetBytes(s);
             handler.Send(msg);
         }
-        public void ReceiveMsg()
+        public string ReceiveMsg()
         {
             string data;
             byte[] bytes = new byte[1024];
-            while (true)
-            {
+           // while (true)
+           // {
                 data = "";
                 while (true)
                 {
@@ -62,8 +62,9 @@ namespace ImpiccatoConsoleServer
                     }
 
                 }
-                Console.WriteLine("Lettera ricevuta: " + data.Substring(0, data.Length - 4));
-            }
+                Console.WriteLine("Lettera ricevuta: " + data.Substring(0, data.Length - 5));
+            return data.Substring(0, data.Length - 5);
+           // }
         }
     }
 }

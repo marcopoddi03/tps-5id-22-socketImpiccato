@@ -43,10 +43,9 @@ namespace ImpiccatoClient
         {
             byte[] msg = Encoding.ASCII.GetBytes(s+"<EOF>");
             int bytesSent = sender.Send(msg);
-            MessageBox.Show("INVIATO!");
         }
 
-        public string ReceiveMsg()
+        public string ReceiveWord()
         {
             string msgRec;
             //while (true)
@@ -57,6 +56,20 @@ namespace ImpiccatoClient
 
            // }
            return msgRec;
+        }
+        public void ReceiveMsg()
+        {
+            string msgRec;
+            while (true)
+            { 
+                byte[] bytes = new byte[1024];
+                int bytesRec = sender.Receive(bytes);
+                msgRec = Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                if (msgRec == "1")
+                    MessageBox.Show("Lettera presente");
+                else
+                    MessageBox.Show("Lettera non presente");
+            }
         }
 
     }

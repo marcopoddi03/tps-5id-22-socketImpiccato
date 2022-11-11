@@ -21,16 +21,16 @@ namespace ImpiccatoClient
             InitializeComponent();
             client=new SocketClient();
             
-            //t1 = new Thread(new ThreadStart(client.ReceiveMsg));
-            //t1.Start();
+            t1 = new Thread(new ThreadStart(client.ReceiveMsg));
         }
 
         private void btnInizia_Click(object sender, EventArgs e)
         {
             client.Connect();
-            lengthParola = Convert.ToInt32(client.ReceiveMsg());
+            lengthParola = Convert.ToInt32(client.ReceiveWord());
             for (int i = 0; i < lengthParola; i++)
                 label1.Text += "- ";
+            t1.Start();
         }
 
         private void btnInvia_Click(object sender, EventArgs e)
