@@ -15,10 +15,12 @@ namespace ImpiccatoClient
         Socket sender;
         bool connected;
         string connectedTo;
+        Parola parola;
 
-        public SocketClient()
+        public SocketClient(ref Parola parola)
         {
             connected = false;
+            this.parola = parola;
         }
         public void Connect()
         {
@@ -66,6 +68,7 @@ namespace ImpiccatoClient
                 int bytesRec = sender.Receive(bytes);
                 msgRec = Encoding.ASCII.GetString(bytes, 0, bytesRec);
                 MessageBox.Show(msgRec);
+                parola.AggiornaParola(msgRec);
             }
         }
 

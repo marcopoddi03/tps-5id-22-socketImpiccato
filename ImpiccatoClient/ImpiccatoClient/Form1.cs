@@ -16,11 +16,12 @@ namespace ImpiccatoClient
         SocketClient client;
         Thread t1;
         int lengthParola;
+        Parola parola;
         public Form1()
         {
             InitializeComponent();
-            client=new SocketClient();
-            
+            parola = new Parola(0);
+            client =new SocketClient(ref parola);
             t1 = new Thread(new ThreadStart(client.ReceiveMsg));
         }
 
@@ -28,8 +29,8 @@ namespace ImpiccatoClient
         {
             client.Connect();
             lengthParola = Convert.ToInt32(client.ReceiveWord());
-            for (int i = 0; i < lengthParola; i++)
-                label1.Text += "- ";
+            parola.l(lengthParola);
+            label1.Text =parola.p();
             t1.Start();
         }
 
