@@ -52,8 +52,7 @@ namespace ImpiccatoClient
            // { 
                 byte[] bytes = new byte[1024];
                 int bytesRec = sender.Receive(bytes);
-                msgRec="Echoed test = {0}" +
-                Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                msgRec= Encoding.ASCII.GetString(bytes, 0, bytesRec);
 
            // }
            return msgRec;

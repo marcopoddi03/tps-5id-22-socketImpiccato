@@ -1,0 +1,13 @@
+C:\Users\poddi.17196\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoConsoleServer\ImpiccatoConsoleServer\bin\Debug\netcoreapp3.1\ImpiccatoConsoleServer.exe
+C:\Users\poddi.17196\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoConsoleServer\ImpiccatoConsoleServer\bin\Debug\netcoreapp3.1\ImpiccatoConsoleServer.deps.json
+C:\Users\poddi.17196\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoConsoleServer\ImpiccatoConsoleServer\bin\Debug\netcoreapp3.1\ImpiccatoConsoleServer.runtimeconfig.json
+C:\Users\poddi.17196\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoConsoleServer\ImpiccatoConsoleServer\bin\Debug\netcoreapp3.1\ImpiccatoConsoleServer.runtimeconfig.dev.json
+C:\Users\poddi.17196\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoConsoleServer\ImpiccatoConsoleServer\bin\Debug\netcoreapp3.1\ImpiccatoConsoleServer.dll
+C:\Users\poddi.17196\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoConsoleServer\ImpiccatoConsoleServer\bin\Debug\netcoreapp3.1\ImpiccatoConsoleServer.pdb
+C:\Users\poddi.17196\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoConsoleServer\ImpiccatoConsoleServer\obj\Debug\netcoreapp3.1\ImpiccatoConsoleServer.csprojAssemblyReference.cache
+C:\Users\poddi.17196\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoConsoleServer\ImpiccatoConsoleServer\obj\Debug\netcoreapp3.1\ImpiccatoConsoleServer.AssemblyInfoInputs.cache
+C:\Users\poddi.17196\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoConsoleServer\ImpiccatoConsoleServer\obj\Debug\netcoreapp3.1\ImpiccatoConsoleServer.AssemblyInfo.cs
+C:\Users\poddi.17196\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoConsoleServer\ImpiccatoConsoleServer\obj\Debug\netcoreapp3.1\ImpiccatoConsoleServer.csproj.CoreCompileInputs.cache
+C:\Users\poddi.17196\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoConsoleServer\ImpiccatoConsoleServer\obj\Debug\netcoreapp3.1\ImpiccatoConsoleServer.dll
+C:\Users\poddi.17196\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoConsoleServer\ImpiccatoConsoleServer\obj\Debug\netcoreapp3.1\ImpiccatoConsoleServer.pdb
+C:\Users\poddi.17196\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoConsoleServer\ImpiccatoConsoleServer\obj\Debug\netcoreapp3.1\ImpiccatoConsoleServer.genruntimeconfig.cache
