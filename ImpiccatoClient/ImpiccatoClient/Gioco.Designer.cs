@@ -33,6 +33,7 @@
             this.domUpLettera = new System.Windows.Forms.DomainUpDown();
             this.labelParola = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.labelErrori = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnInviaLett
@@ -75,6 +76,7 @@
             this.domUpLettera.Items.Add("Z");
             this.domUpLettera.Location = new System.Drawing.Point(460, 103);
             this.domUpLettera.Name = "domUpLettera";
+            this.domUpLettera.ReadOnly = true;
             this.domUpLettera.Size = new System.Drawing.Size(56, 20);
             this.domUpLettera.TabIndex = 4;
             // 
@@ -82,7 +84,7 @@
             // 
             this.labelParola.AutoSize = true;
             this.labelParola.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelParola.Location = new System.Drawing.Point(173, 131);
+            this.labelParola.Location = new System.Drawing.Point(172, 103);
             this.labelParola.Name = "labelParola";
             this.labelParola.Size = new System.Drawing.Size(70, 25);
             this.labelParola.TabIndex = 6;
@@ -93,11 +95,21 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // labelErrori
+            // 
+            this.labelErrori.AutoSize = true;
+            this.labelErrori.Location = new System.Drawing.Point(369, 198);
+            this.labelErrori.Name = "labelErrori";
+            this.labelErrori.Size = new System.Drawing.Size(13, 13);
+            this.labelErrori.TabIndex = 7;
+            this.labelErrori.Text = "0";
+            // 
             // Gioco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 264);
+            this.Controls.Add(this.labelErrori);
             this.Controls.Add(this.labelParola);
             this.Controls.Add(this.btnInviaLett);
             this.Controls.Add(this.domUpLettera);
@@ -114,5 +126,6 @@
         private System.Windows.Forms.DomainUpDown domUpLettera;
         private System.Windows.Forms.Label labelParola;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label labelErrori;
     }
 }

@@ -28,11 +28,13 @@ namespace ImpiccatoClient
         private void btnInviaLett_Click(object sender, EventArgs e)
         {
             client.SendMsg(domUpLettera.SelectedItem.ToString());
+            domUpLettera.Items.RemoveAt(domUpLettera.SelectedIndex);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             labelParola.Text = parola.p();
+            labelErrori.Text = parola.e().ToString();
         }
     }
 }

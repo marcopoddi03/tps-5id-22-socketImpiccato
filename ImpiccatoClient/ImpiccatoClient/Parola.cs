@@ -11,11 +11,21 @@ namespace ImpiccatoClient
     {
         int length;
         char[] parola;
+        int nErrori;
+
+        public Parola()
+        {
+            nErrori = 0;
+        }
        
         public string p()
         {
             string s = new string(parola);
             return s;
+        }
+        public int e()
+        {
+            return nErrori;
         }
         public void l(int l)
         {
@@ -29,16 +39,18 @@ namespace ImpiccatoClient
         public void AggiornaParola(string s)
         {
             char[] m = s.ToCharArray();
-            for (int i=0;i<m.Length;i++)
+            if (m.Length == 1)
+                nErrori++;
+            else
             {
-                if(i!=0)
+                for (int i = 0; i < m.Length; i++)
                 {
-                    parola[Convert.ToInt32(m[i].ToString())] = m[0];
+                    if (i != 0)
+                    {
+                        parola[Convert.ToInt32(m[i].ToString())] = m[0];
+                    }
                 }
-            }
-            MessageBox.Show("3");
-            string o = new string(parola);
-            MessageBox.Show(o);
+            }            
         }
     }
     

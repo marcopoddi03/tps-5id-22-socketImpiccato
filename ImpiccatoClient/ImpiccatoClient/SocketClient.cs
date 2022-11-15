@@ -33,7 +33,6 @@ namespace ImpiccatoClient
                 sender.Connect(remoteEP);
                 connected = true;
                 connectedTo = sender.RemoteEndPoint.ToString();
-                MessageBox.Show("CONNESSO AL SERVER!");
             }
             catch (Exception e)
             {
@@ -85,7 +84,6 @@ namespace ImpiccatoClient
                     }
 
                 }
-                MessageBox.Show(data.Substring(0, data.Length - 5));
                 parola.AggiornaParola(data.Substring(0, data.Length - 5));
             }
         }
