@@ -49,26 +49,43 @@ namespace ImpiccatoClient
 
         public string ReceiveWord()
         {
-            string msgRec;
-            //while (true)
-           // { 
-                byte[] bytes = new byte[1024];
+            string data;
+            byte[] bytes = new byte[1024];
+            data = "";
+            while (true)
+            {
                 int bytesRec = sender.Receive(bytes);
-                msgRec= Encoding.ASCII.GetString(bytes, 0, bytesRec);
 
-           // }
-           return msgRec;
+                data += Encoding.ASCII.GetString(bytes, 0, bytesRec);
+
+                if (data.IndexOf("<EOF>") > -1)
+                {
+                    break;
+                }
+
+            }
+            return data.Substring(0, data.Length - 5);
         }
         public void ReceiveMsg()
         {
-            string msgRec;
+            string data;
+            byte[] bytes = new byte[1024];
             while (true)
-            { 
-                byte[] bytes = new byte[1024];
-                int bytesRec = sender.Receive(bytes);
-                msgRec = Encoding.ASCII.GetString(bytes, 0, bytesRec);
-                MessageBox.Show(msgRec);
-                parola.AggiornaParola(msgRec);
+            {
+                data = "";
+                while (true)
+                {
+                    int bytesRec = sender.Receive(bytes);
+
+                    data += Encoding.ASCII.GetString(bytes, 0, bytesRec);
+
+                    if (data.IndexOf("<EOF>") > -1)
+                    {
+                        break;
+                    }
+
+                }
+                parola.AggiornaParola(data.Substring(0, data.Length - 5));
             }
         }
 

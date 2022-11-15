@@ -22,7 +22,7 @@ namespace ImpiccatoConsoleServer
             parola = sr.ReadLine();
             Console.WriteLine("parola scelta: "+ parola);
             server.Connect();
-            server.SendMsg(parola.Length.ToString());
+            server.SendMsg(parola.Length.ToString()+"<EOF>");
             Console.WriteLine("lunghezza parola inviata");
             Console.WriteLine("Aspetto lettere");
             //t1.Start();
