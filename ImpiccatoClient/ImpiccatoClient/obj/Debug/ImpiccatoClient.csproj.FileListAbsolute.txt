@@ -19,3 +19,4 @@ C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\Impicc
 C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.csproj.CoreCompileInputs.cache
 C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.exe
 C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.pdb
+C:\Users\lumia\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.Gioco.resources

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lumia\\Source\\Repos\\marcopoddi03\\tps-5id-22-socketImpiccato\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer.csproj": {}
+    "C:\\Users\\lumia\\source\\repos\\marcopoddi03\\tps-5id-22-socketImpiccato\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lumia\\Source\\Repos\\marcopoddi03\\tps-5id-22-socketImpiccato\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer.csproj": {
+    "C:\\Users\\lumia\\source\\repos\\marcopoddi03\\tps-5id-22-socketImpiccato\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lumia\\Source\\Repos\\marcopoddi03\\tps-5id-22-socketImpiccato\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer.csproj",
+        "projectUniqueName": "C:\\Users\\lumia\\source\\repos\\marcopoddi03\\tps-5id-22-socketImpiccato\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer.csproj",
         "projectName": "ImpiccatoConsoleServer",
-        "projectPath": "C:\\Users\\lumia\\Source\\Repos\\marcopoddi03\\tps-5id-22-socketImpiccato\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer.csproj",
+        "projectPath": "C:\\Users\\lumia\\source\\repos\\marcopoddi03\\tps-5id-22-socketImpiccato\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer.csproj",
         "packagesPath": "C:\\Users\\lumia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lumia\\Source\\Repos\\marcopoddi03\\tps-5id-22-socketImpiccato\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer\\obj\\",
+        "outputPath": "C:\\Users\\lumia\\source\\repos\\marcopoddi03\\tps-5id-22-socketImpiccato\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lumia\\AppData\\Roaming\\NuGet\\NuGet.Config",

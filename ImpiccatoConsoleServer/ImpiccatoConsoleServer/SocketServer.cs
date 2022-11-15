@@ -40,7 +40,7 @@ namespace ImpiccatoConsoleServer
 
         public void SendMsg(string s)
         {
-            byte[] msg = Encoding.ASCII.GetBytes(s);
+            byte[] msg = Encoding.ASCII.GetBytes(s+"<EOF>");
             handler.Send(msg);
         }
         public string ReceiveMsg()

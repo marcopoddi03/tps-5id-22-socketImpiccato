@@ -21,8 +21,9 @@ namespace ImpiccatoConsoleServer
             }
             parola = sr.ReadLine();
             Console.WriteLine("parola scelta: "+ parola);
+            Console.WriteLine("Aspetto client...");
             server.Connect();
-            server.SendMsg(parola.Length.ToString()+"<EOF>");
+            server.SendMsg(parola.Length.ToString());
             Console.WriteLine("lunghezza parola inviata");
             Console.WriteLine("Aspetto lettere");
             //t1.Start();

@@ -11,32 +11,32 @@ namespace ImpiccatoClient
     {
         int length;
         char[] parola;
-        public Parola(int length)
-        {
-            parola = new char[length];
-            this.length = length;
-            for (int i = 0; i < length; i++)
-                parola[i]= '-';
-        }
+       
         public string p()
         {
             string s = new string(parola);
             return s;
         }
-        public void l(int lenght)
+        public void l(int l)
         {
-            this.length = lenght;
+            length = l;
+            parola = new char[length];
+            for (int i = 0; i < length; i++)
+            {
+                parola[i] = '-';
+            }
         }
         public void AggiornaParola(string s)
         {
             char[] m = s.ToCharArray();
-            for(int i=0;i<m.Length;i++)
+            for (int i=0;i<m.Length;i++)
             {
                 if(i!=0)
                 {
-                    parola[m[i]] = m[0];
+                    parola[Convert.ToInt32(m[i].ToString())] = m[0];
                 }
             }
+            MessageBox.Show("3");
             string o = new string(parola);
             MessageBox.Show(o);
         }

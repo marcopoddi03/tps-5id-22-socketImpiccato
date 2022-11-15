@@ -85,6 +85,7 @@ namespace ImpiccatoClient
                     }
 
                 }
+                MessageBox.Show(data.Substring(0, data.Length - 5));
                 parola.AggiornaParola(data.Substring(0, data.Length - 5));
             }
         }

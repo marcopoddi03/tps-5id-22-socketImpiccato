@@ -19,7 +19,7 @@ namespace ImpiccatoClient
         public Form1()
         {
             InitializeComponent();
-            parola = new Parola(0);
+            parola = new Parola();
             client =new SocketClient(ref parola);
         }
 
@@ -30,6 +30,7 @@ namespace ImpiccatoClient
             parola.l(lengthParola);
             fGioco = new Gioco(ref client, ref parola);
             fGioco.Show();
+            this.Hide();
         }
 
     }
