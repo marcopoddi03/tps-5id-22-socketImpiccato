@@ -22,19 +22,29 @@ namespace ImpiccatoClient
             this.client = client;
             this.parola = parola;
             t1 = new Thread(new ThreadStart(client.ReceiveMsg));
-            t1.Start();            
+            t1.Start();
+            domUpLettera.SelectedIndex = 0;
         }
 
         private void btnInviaLett_Click(object sender, EventArgs e)
         {
             client.SendMsg(domUpLettera.SelectedItem.ToString());
             domUpLettera.Items.RemoveAt(domUpLettera.SelectedIndex);
+            domUpLettera.DownButton();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            int err;
             labelParola.Text = parola.p();
-            labelErrori.Text = parola.e().ToString();
+            err = parola.e() + 1;
+            if(err<10)
+                pictureBox1.Image = Image.FromFile("./img/impiccato"+ err.ToString() + ".jpg");
+            else
+            {
+                pictureBox1.Image = Image.FromFile("./img/impiccato" + err.ToString() + ".jpg");
+                timer1.Stop();
+            }
         }
     }
 }
