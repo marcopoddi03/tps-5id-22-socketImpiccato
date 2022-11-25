@@ -47,24 +47,20 @@ namespace ImpiccatoConsoleServer
         {
             string data;
             byte[] bytes = new byte[1024];
-           // while (true)
-           // {
-                data = "";
-                while (true)
-                {
-                    int bytesRec = handler.Receive(bytes);
+            data = "";
+            while (true)
+            {
+                int bytesRec = handler.Receive(bytes);
 
-                    data += Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                data += Encoding.ASCII.GetString(bytes, 0, bytesRec);
                     
-                    if (data.IndexOf("<EOF>") > -1)
-                    {
-                        break;
-                    }
-
+                if (data.IndexOf("<EOF>") > -1)
+                {
+                    break;
                 }
-                Console.WriteLine("Lettera ricevuta: " + data.Substring(0, data.Length - 5));
+
+            }
             return data.Substring(0, data.Length - 5);
-           // }
         }
     }
 }

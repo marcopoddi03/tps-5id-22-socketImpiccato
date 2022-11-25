@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FMyT21pebmOukslcRyGfSqKvjS41EDiBk8uHGpXxJ7x8nkvYpIdAhR5RNbL/XcIopYcs8E4vZo1sGzohxD9Elg==",
+  "dgSpecHash": "8fEaFXBLvyZDmlLAjnsaODMY6rNjNMh5S24OFQucp9JOO+lZmBwhv9gVQTR9Fg7driL1EnhZaswv2xQoAyBcyw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lumia\\source\\repos\\marcopoddi03\\tps-5id-22-socketImpiccato\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\lumia\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.21\\microsoft.netcore.app.host.win-x64.3.1.21.nupkg.sha512",
-    "C:\\Users\\lumia\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\lumia\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\lumia\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\poddi.17196\\Source\\Repos\\marcopoddi03\\tps-5id-22-socketImpiccato\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer\\ImpiccatoConsoleServer.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

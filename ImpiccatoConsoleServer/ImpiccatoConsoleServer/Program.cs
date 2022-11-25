@@ -35,6 +35,14 @@ namespace ImpiccatoConsoleServer
             {
                 par = "";
                 s = server.ReceiveMsg();
+                if(s=="Restart")
+                {
+                    
+                }
+                else if(s=="Exit")
+                {
+
+                }
                 par = par + Convert.ToChar(s.ToLower());
                 Console.WriteLine("Controllo se la lettera è presente..");
                 k = 0;

@@ -1,8 +1,9 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\lumia\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\lumia\\.nuget\\packages"
+      "C:\\Users\\poddi.17196\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\poddi.17196\\.nuget\\packages",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ]
   }
 }
