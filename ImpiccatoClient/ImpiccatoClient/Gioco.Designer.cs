@@ -85,12 +85,12 @@
             // labelParola
             // 
             this.labelParola.AutoSize = true;
-            this.labelParola.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelParola.Font = new System.Drawing.Font("Segoe UI Symbol", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelParola.Location = new System.Drawing.Point(75, 144);
             this.labelParola.Name = "labelParola";
-            this.labelParola.Size = new System.Drawing.Size(86, 31);
+            this.labelParola.Size = new System.Drawing.Size(115, 37);
             this.labelParola.TabIndex = 6;
-            this.labelParola.Text = "label1";
+            this.labelParola.Text = "PAROLA";
             // 
             // timer1
             // 

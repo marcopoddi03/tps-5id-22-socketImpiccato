@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
+using System.Reflection;
 
 namespace ImpiccatoConsoleServer
 {
@@ -61,6 +62,11 @@ namespace ImpiccatoConsoleServer
 
             }
             return data.Substring(0, data.Length - 5);
+        }
+        public void endSocket()
+        {
+            handler.Shutdown(SocketShutdown.Both);
+            handler.Close();
         }
     }
 }

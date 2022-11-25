@@ -12,7 +12,6 @@ C:\Users\lumia\source\repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoCli
 C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\bin\Debug\ImpiccatoClient.exe.config
 C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\bin\Debug\ImpiccatoClient.exe
 C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\bin\Debug\ImpiccatoClient.pdb
-C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.csprojAssemblyReference.cache
 C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.Form1.resources
 C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.Properties.Resources.resources
 C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.csproj.GenerateResource.cache
@@ -20,3 +19,6 @@ C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\Impicc
 C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.exe
 C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.pdb
 C:\Users\lumia\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.Gioco.resources
+C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.csproj.AssemblyReference.cache
+C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.csproj.SuggestedBindingRedirects.cache
+C:\Users\poddi.17196\Source\Repos\marcopoddi03\tps-5id-22-socketImpiccato\ImpiccatoClient\ImpiccatoClient\obj\Debug\ImpiccatoClient.Gioco.resources

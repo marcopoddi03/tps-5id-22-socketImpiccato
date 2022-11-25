@@ -29,6 +29,10 @@ namespace ImpiccatoClient
         {
             return nErrori;
         }
+        public bool v()
+        {
+            return indovinata;
+        }
         public void l(int l)
         {
             length = l;
@@ -52,7 +56,7 @@ namespace ImpiccatoClient
                         parola[Convert.ToInt32(m[i].ToString())] = m[0];
                     }
                 }
-                if (!parola.Contains('_'))
+                if (!parola.Contains('-'))
                     indovinata = true;
             }
         }

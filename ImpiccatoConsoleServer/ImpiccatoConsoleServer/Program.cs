@@ -9,50 +9,48 @@ namespace ImpiccatoConsoleServer
         static void Main(string[] args)
         {
             SocketServer server = new SocketServer();
-            Thread t1;
-            //t1 = new Thread(new ThreadStart(server.ReceiveMsg));
             string parola;
             Random rnd = new Random();
             StreamReader sr = new StreamReader("parole.txt");
             string line;
+            Console.WriteLine("SERVER GIOCO DELL'IMPICCATO");
+            Console.WriteLine("Aspetto client...");
+            server.Connect();
+            Console.WriteLine("Client connesso!");
             for (int i = 0; i < rnd.Next(1, 1000); i++)
             {
                 line = sr.ReadLine();
             }
-            parola = sr.ReadLine();
-            Console.WriteLine("parola scelta: "+ parola);
-            Console.WriteLine("Aspetto client...");
-            server.Connect();
+            parola = sr.ReadLine().ToUpper();            
             server.SendMsg(parola.Length.ToString());
-            Console.WriteLine("lunghezza parola inviata");
-            Console.WriteLine("Aspetto lettere");
-            //t1.Start();
+            Console.WriteLine("Parola scelta e lunghezza parola inviata!" + parola);
             char[] arr=parola.ToCharArray();
             string par;
             string s;
             int k;
             while(true)
             {
+                Console.WriteLine("\nAspetto lettere...");
                 par = "";
                 s = server.ReceiveMsg();
-                if(s=="Restart")
+                if(s=="Exit")
                 {
-                    
+                    server.endSocket();
+                    Console.WriteLine("Fine partita! Client disconnesso. Premi un tasto per uscire...");
+                    Console.ReadKey();
+                    break;
                 }
-                else if(s=="Exit")
-                {
-
-                }
-                par = par + Convert.ToChar(s.ToLower());
-                Console.WriteLine("Controllo se la lettera è presente..");
+                par = par + Convert.ToChar(s.ToUpper());
+                Console.WriteLine("Controllo se la lettera "+par+" è presente...");
                 k = 0;
                 foreach(char c in arr)
                 {
-                    if (c == Convert.ToChar(s.ToLower()))
-                        par = par + k.ToString();
-                    k++;
-                }
+                    if (c == Convert.ToChar(s.ToUpper()))
+                         par = par + k.ToString(); 
+                     k++;
+                }                
                 server.SendMsg(par);
+                Console.WriteLine("Risultato mandato");
 
             }
 

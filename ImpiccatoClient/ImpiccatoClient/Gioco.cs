@@ -38,13 +38,31 @@ namespace ImpiccatoClient
         {
             int err;
             labelParola.Text = parola.p();
+            if(parola.v())
+            {
+                t1.Abort();
+                client.SendMsg("Exit");
+                //client.endSocket();
+                timer1.Stop();
+                DialogResult dialogResult = MessageBox.Show("Hai indovinato la parola "+ parola.p()+"! Vuoi rigiocare?", "Fine partita", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Application.Restart();
+                }
+                else if (dialogResult == DialogResult.No)
+                {                    
+                    Application.Exit();
+                }
+                
+            }
             err = parola.e() + 1;
             if(err<10)
                 pictureBox1.Image = Image.FromFile("./img/impiccato"+ err.ToString() + ".jpg");
             else
             {
                 pictureBox1.Image = Image.FromFile("./img/impiccato" + err.ToString() + ".jpg");
-                MessageBox.Show("Hai perso!");                
+                MessageBox.Show("Hai perso!");
+                t1.Abort();
                 client.endSocket();
                 timer1.Stop();
             }
