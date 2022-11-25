@@ -35,29 +35,35 @@
             // 
             // btnInizia
             // 
-            this.btnInizia.Location = new System.Drawing.Point(105, 67);
+            this.btnInizia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnInizia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInizia.ForeColor = System.Drawing.Color.White;
+            this.btnInizia.Location = new System.Drawing.Point(126, 76);
             this.btnInizia.Name = "btnInizia";
-            this.btnInizia.Size = new System.Drawing.Size(118, 36);
+            this.btnInizia.Size = new System.Drawing.Size(123, 43);
             this.btnInizia.TabIndex = 0;
             this.btnInizia.Text = "CONNETTI AL SERVER";
-            this.btnInizia.UseVisualStyleBackColor = true;
+            this.btnInizia.UseVisualStyleBackColor = false;
             this.btnInizia.Click += new System.EventHandler(this.btnInizia_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(102, 32);
+            this.label2.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 13);
+            this.label2.Size = new System.Drawing.Size(362, 31);
             this.label2.TabIndex = 4;
             this.label2.Text = "GIOCO DELL\'IMPICCATO";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(81, 126);
+            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(64, 142);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 13);
+            this.label3.Size = new System.Drawing.Size(260, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "assicurati che il server sia accesso!";
             // 
@@ -65,7 +71,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 180);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(382, 187);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnInizia);

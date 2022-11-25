@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Net.Sockets;
 
 namespace ImpiccatoClient
 {
@@ -43,8 +44,15 @@ namespace ImpiccatoClient
             else
             {
                 pictureBox1.Image = Image.FromFile("./img/impiccato" + err.ToString() + ".jpg");
+                MessageBox.Show("Hai perso!");                
+                client.endSocket();
                 timer1.Stop();
             }
+        }
+
+        private void Gioco_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            client.endSocket();
         }
     }
 }

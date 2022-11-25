@@ -34,14 +34,15 @@
             this.labelParola = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnInviaLett
             // 
-            this.btnInviaLett.Location = new System.Drawing.Point(284, 135);
+            this.btnInviaLett.Location = new System.Drawing.Point(383, 181);
             this.btnInviaLett.Name = "btnInviaLett";
-            this.btnInviaLett.Size = new System.Drawing.Size(75, 36);
+            this.btnInviaLett.Size = new System.Drawing.Size(71, 24);
             this.btnInviaLett.TabIndex = 5;
             this.btnInviaLett.Text = "INVIA";
             this.btnInviaLett.UseVisualStyleBackColor = true;
@@ -75,19 +76,19 @@
             this.domUpLettera.Items.Add("X");
             this.domUpLettera.Items.Add("Y");
             this.domUpLettera.Items.Add("Z");
-            this.domUpLettera.Location = new System.Drawing.Point(303, 97);
+            this.domUpLettera.Location = new System.Drawing.Point(383, 155);
             this.domUpLettera.Name = "domUpLettera";
             this.domUpLettera.ReadOnly = true;
-            this.domUpLettera.Size = new System.Drawing.Size(56, 20);
+            this.domUpLettera.Size = new System.Drawing.Size(71, 20);
             this.domUpLettera.TabIndex = 4;
             // 
             // labelParola
             // 
             this.labelParola.AutoSize = true;
-            this.labelParola.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelParola.Location = new System.Drawing.Point(51, 115);
+            this.labelParola.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelParola.Location = new System.Drawing.Point(75, 144);
             this.labelParola.Name = "labelParola";
-            this.labelParola.Size = new System.Drawing.Size(70, 25);
+            this.labelParola.Size = new System.Drawing.Size(86, 31);
             this.labelParola.TabIndex = 6;
             this.labelParola.Text = "label1";
             // 
@@ -98,23 +99,36 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(474, 39);
+            this.pictureBox1.Location = new System.Drawing.Point(509, 73);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 214);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cooper Black", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(140, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(362, 31);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "GIOCO DELL\'IMPICCATO";
+            // 
             // Gioco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 282);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(667, 322);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelParola);
             this.Controls.Add(this.btnInviaLett);
             this.Controls.Add(this.domUpLettera);
             this.Name = "Gioco";
             this.Text = "Gioco";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Gioco_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -128,5 +142,6 @@
         private System.Windows.Forms.Label labelParola;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

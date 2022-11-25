@@ -12,10 +12,12 @@ namespace ImpiccatoClient
         int length;
         char[] parola;
         int nErrori;
+        bool indovinata;
 
         public Parola()
         {
             nErrori = 0;
+            indovinata = false;
         }
        
         public string p()
@@ -50,7 +52,9 @@ namespace ImpiccatoClient
                         parola[Convert.ToInt32(m[i].ToString())] = m[0];
                     }
                 }
-            }            
+                if (!parola.Contains('_'))
+                    indovinata = true;
+            }
         }
     }
     

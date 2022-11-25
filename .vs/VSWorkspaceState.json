@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ImpiccatoClient",
+    "\\ImpiccatoClient\\ImpiccatoClient"
   ],
-  "SelectedNode": "\\ImpiccatoServerC.sln",
+  "SelectedNode": "\\ImpiccatoClient\\ImpiccatoClient\\SocketClient.cs",
   "PreviewInSolutionExplorer": false
 }

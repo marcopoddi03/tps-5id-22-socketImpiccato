@@ -88,5 +88,11 @@ namespace ImpiccatoClient
             }
         }
 
+        public void endSocket()
+        {
+            sender.Shutdown(SocketShutdown.Both);
+            sender.Close();
+        }
+
     }
 }
