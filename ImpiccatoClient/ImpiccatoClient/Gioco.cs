@@ -34,17 +34,21 @@ namespace ImpiccatoClient
             domUpLettera.DownButton();
         }
 
+        private void FineGioco()
+        {
+            t1.Abort();
+            client.SendMsg("Exit");
+            timer1.Stop();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             int err;
             labelParola.Text = parola.p();
-            if(parola.v())
+            if(parola.Indovinata)
             {
-                t1.Abort();
-                client.SendMsg("Exit");
-                //client.endSocket();
-                timer1.Stop();
-                DialogResult dialogResult = MessageBox.Show("Hai indovinato la parola "+ parola.p()+"! Vuoi rigiocare?", "Fine partita", MessageBoxButtons.YesNo);
+                FineGioco();
+                DialogResult dialogResult = MessageBox.Show("Hai vinto! Vuoi rigiocare?", "Fine partita", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     Application.Restart();
@@ -61,16 +65,27 @@ namespace ImpiccatoClient
             else
             {
                 pictureBox1.Image = Image.FromFile("./img/impiccato" + err.ToString() + ".jpg");
-                MessageBox.Show("Hai perso!");
-                t1.Abort();
-                client.endSocket();
-                timer1.Stop();
+                FineGioco();
+                DialogResult dialogResult = MessageBox.Show("Hai perso! Vuoi rigiocare?", "Fine partita", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Application.Restart();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    Application.Exit();
+                }
             }
         }
 
         private void Gioco_FormClosed(object sender, FormClosedEventArgs e)
         {
             client.endSocket();
+        }
+
+        private void btnInviaPar_Click(object sender, EventArgs e)
+        {
+            client.SendMsg(txtParola.Text);
         }
     }
 }
