@@ -119,9 +119,9 @@
             // 
             // txtParola
             // 
-            this.txtParola.Location = new System.Drawing.Point(367, 201);
+            this.txtParola.Location = new System.Drawing.Point(355, 201);
             this.txtParola.Name = "txtParola";
-            this.txtParola.Size = new System.Drawing.Size(112, 20);
+            this.txtParola.Size = new System.Drawing.Size(124, 20);
             this.txtParola.TabIndex = 10;
             // 
             // btnInviaPar

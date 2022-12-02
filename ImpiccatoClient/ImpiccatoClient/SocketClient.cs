@@ -13,13 +13,11 @@ namespace ImpiccatoClient
     public class SocketClient
     {
         Socket sender;
-        bool connected;
         string connectedTo;
         Parola parola;
 
         public SocketClient(ref Parola parola)
         {
-            connected = false;
             this.parola = parola;
         }
         public void Connect()
@@ -31,7 +29,6 @@ namespace ImpiccatoClient
             try
             {
                 sender.Connect(remoteEP);
-                connected = true;
                 connectedTo = sender.RemoteEndPoint.ToString();
             }
             catch (Exception e)
@@ -40,10 +37,21 @@ namespace ImpiccatoClient
             }
         }
 
+        public string ConnTo()
+        {
+            return connectedTo;
+        }
         public void SendMsg(string s)
         {
-            byte[] msg = Encoding.ASCII.GetBytes(s+"<EOF>");
-            int bytesSent = sender.Send(msg);
+            try
+            {
+                byte[] msg = Encoding.ASCII.GetBytes(s + "<EOF>");
+                int bytesSent = sender.Send(msg);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }            
         }
 
         public string ReceiveWord()
@@ -53,14 +61,21 @@ namespace ImpiccatoClient
             data = "";
             while (true)
             {
-                int bytesRec = sender.Receive(bytes);
-
-                data += Encoding.ASCII.GetString(bytes, 0, bytesRec);
-
-                if (data.IndexOf("<EOF>") > -1)
+                try
                 {
-                    break;
+                    int bytesRec = sender.Receive(bytes);
+
+                    data += Encoding.ASCII.GetString(bytes, 0, bytesRec);
+
+                    if (data.IndexOf("<EOF>") > -1)
+                    {
+                        break;
+                    }
                 }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }               
 
             }
             return data.Substring(0, data.Length - 5);
@@ -74,19 +89,28 @@ namespace ImpiccatoClient
                 data = "";
                 while (true)
                 {
-                    int bytesRec = sender.Receive(bytes);
-
-                    data += Encoding.ASCII.GetString(bytes, 0, bytesRec);
-
-                    if (data.IndexOf("<EOF>") > -1)
+                    try
                     {
-                        break;
+                        int bytesRec = sender.Receive(bytes);
+
+                        data += Encoding.ASCII.GetString(bytes, 0, bytesRec);
+
+                        if (data.IndexOf("<EOF>") > -1)
+                        {
+                            break;
+                        }
                     }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e.ToString());
+                    }                   
 
                 }
                 if (data.Substring(0, data.Length - 5) == "Ok")
                     parola.Indovinata = true;
-                else if (data.Substring(0, data.Length - 5) != "No")                
+                else if (data.Substring(0, data.Length - 5) == "No")
+                    parola.Errori++;
+                else
                     parola.AggiornaParola(data.Substring(0, data.Length - 5));
                 
             }
@@ -94,8 +118,15 @@ namespace ImpiccatoClient
 
         public void endSocket()
         {
-            sender.Shutdown(SocketShutdown.Both);
-            sender.Close();
+            try
+            {
+                sender.Shutdown(SocketShutdown.Both);
+                sender.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }            
         }
 
     }

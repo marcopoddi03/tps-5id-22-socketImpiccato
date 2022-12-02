@@ -46,31 +46,36 @@ namespace ImpiccatoConsoleServer
                         k++;
                     }
                     server.SendMsg(par);
+                    Console.WriteLine("Risultato mandato");
                 }
                 else
                 {
-                    if (s == "Exit")
+                    if (s == "Exit1")
                     {
-                        server.endSocket();
-                        Console.WriteLine("Fine partita! Arrivederci!\n");
+                        Console.WriteLine("Complimenti hai vinto! Arrivederci!\n");
                         gioco=false;
+                    }
+                    else if (s == "Exit0")
+                    {
+                        Console.WriteLine("Mi dispiace hai perso, la parola era " + parola+". Arrivederci!\n");
+                        gioco = false;
                     }
                     else if(s.ToUpper()==parola)
                     {
+                        Console.WriteLine("Controllo se la parola "+ s.ToUpper() +" è corretta...");
                         server.SendMsg("Ok");
+                        Console.WriteLine("Risultato mandato");
                     }
                     else
                     {
+                        Console.WriteLine("Controllo se la parola " + s.ToUpper() + " è corretta...");
                         server.SendMsg("No");
+                        Console.WriteLine("Risultato mandato");
                     }
                     
-                }
-                
-                
-                Console.WriteLine("Risultato mandato");
-
+                }           
             }
-
+            server.endSocket();
         }
     }
 }

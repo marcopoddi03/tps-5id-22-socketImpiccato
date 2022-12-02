@@ -42,7 +42,14 @@ namespace ImpiccatoConsoleServer
         public void SendMsg(string s)
         {
             byte[] msg = Encoding.ASCII.GetBytes(s+"<EOF>");
-            handler.Send(msg);
+            try
+            {
+                handler.Send(msg);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }            
         }
         public string ReceiveMsg()
         {
@@ -51,22 +58,35 @@ namespace ImpiccatoConsoleServer
             data = "";
             while (true)
             {
-                int bytesRec = handler.Receive(bytes);
-
-                data += Encoding.ASCII.GetString(bytes, 0, bytesRec);
-                    
-                if (data.IndexOf("<EOF>") > -1)
+                try
                 {
-                    break;
-                }
+                    int bytesRec = handler.Receive(bytes);
 
+                    data += Encoding.ASCII.GetString(bytes, 0, bytesRec);
+
+                    if (data.IndexOf("<EOF>") > -1)
+                    {
+                        break;
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }                
             }
             return data.Substring(0, data.Length - 5);
         }
         public void endSocket()
         {
-            handler.Shutdown(SocketShutdown.Both);
-            handler.Close();
+            try
+            {
+                handler.Shutdown(SocketShutdown.Both);
+                handler.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }            
         }
     }
 }

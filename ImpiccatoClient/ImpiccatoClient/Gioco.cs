@@ -17,11 +17,13 @@ namespace ImpiccatoClient
         SocketClient client;
         Parola parola;
         Thread t1;
+        bool vincita;
         public Gioco(ref SocketClient client, ref Parola parola)
         {
             InitializeComponent();
             this.client = client;
             this.parola = parola;
+            vincita = false;
             t1 = new Thread(new ThreadStart(client.ReceiveMsg));
             t1.Start();
             domUpLettera.SelectedIndex = 0;
@@ -34,23 +36,22 @@ namespace ImpiccatoClient
             domUpLettera.DownButton();
         }
 
-        private void FineGioco(bool vinto)
+        private void FineGioco()
         {
-            t1.Abort();            
+            t1.Abort();
             timer1.Stop();
             DialogResult dialogResult;
-            if (vinto)
+            if (vincita)
             {
-                client.SendMsg("Exit1");
-                dialogResult = MessageBox.Show("Hai vinto! Vuoi rigiocare?", "Fine partita", MessageBoxButtons.YesNo);
+               dialogResult = MessageBox.Show("Hai vinto! Vuoi rigiocare?", "Fine partita", MessageBoxButtons.YesNo);
             }
             else
             {
-                client.SendMsg("Exit0");
                 dialogResult = MessageBox.Show("Hai perso! Vuoi rigiocare?", "Fine partita", MessageBoxButtons.YesNo);
             }
             if (dialogResult == DialogResult.Yes)
             {
+                client.SendMsg("Exit0");
                 Application.Restart();
             }
             else if (dialogResult == DialogResult.No)
@@ -65,21 +66,27 @@ namespace ImpiccatoClient
             labelParola.Text = parola.p();
             if(parola.Indovinata)
             {
-                FineGioco(true);                
+                vincita = true;
+                FineGioco();                
             }
-            err = parola.e() + 1;
+            err = parola.Errori + 1;
             if(err<10)
                 pictureBox1.Image = Image.FromFile("./img/impiccato"+ err.ToString() + ".jpg");
             else
             {
                 pictureBox1.Image = Image.FromFile("./img/impiccato" + err.ToString() + ".jpg");
-                FineGioco(false);
+                FineGioco();
             }
         }
 
         private void Gioco_FormClosed(object sender, FormClosedEventArgs e)
         {
+            if(vincita)
+                client.SendMsg("Exit1");
+            else
+                client.SendMsg("Exit0");
             client.endSocket();
+            Application.Exit();
         }
 
         private void btnInviaPar_Click(object sender, EventArgs e)

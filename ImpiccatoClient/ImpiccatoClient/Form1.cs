@@ -26,6 +26,7 @@ namespace ImpiccatoClient
         private void btnInizia_Click(object sender, EventArgs e)
         {
             client.Connect();
+            MessageBox.Show("Connesso a: " + client.ConnTo());
             lengthParola = Convert.ToInt32(client.ReceiveWord());
             parola.l(lengthParola);
             fGioco = new Gioco(ref client, ref parola);

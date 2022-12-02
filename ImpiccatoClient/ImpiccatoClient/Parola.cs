@@ -25,9 +25,10 @@ namespace ImpiccatoClient
             string s = new string(parola);
             return s;
         }
-        public int e()
+        public int Errori
         {
-            return nErrori;
+            get { return nErrori; }
+            set { nErrori = value; }
         }
         public bool Indovinata
         {
