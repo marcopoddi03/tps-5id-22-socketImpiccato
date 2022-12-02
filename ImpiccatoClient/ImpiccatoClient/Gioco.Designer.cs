@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtParola = new System.Windows.Forms.TextBox();
             this.btnInviaPar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,12 +135,22 @@
             this.btnInviaPar.UseVisualStyleBackColor = true;
             this.btnInviaPar.Click += new System.EventHandler(this.btnInviaPar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "label1";
+            // 
             // Gioco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(667, 322);
+            this.ClientSize = new System.Drawing.Size(658, 322);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInviaPar);
             this.Controls.Add(this.txtParola);
             this.Controls.Add(this.label2);
@@ -166,5 +177,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtParola;
         private System.Windows.Forms.Button btnInviaPar;
+        private System.Windows.Forms.Label label1;
     }
 }

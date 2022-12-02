@@ -24,7 +24,7 @@ namespace ImpiccatoConsoleServer
             }
             parola = sr.ReadLine().ToUpper();            
             server.SendMsg(parola.Length.ToString());
-            Console.WriteLine("Parola scelta e lunghezza parola inviata!" + parola);
+            Console.WriteLine("Parola scelta e lunghezza parola inviata!");
             char[] arr=parola.ToCharArray();
             string par;
             string s;
@@ -37,7 +37,7 @@ namespace ImpiccatoConsoleServer
                 if(s.Length==1)
                 {
                     par = par + Convert.ToChar(s.ToUpper());
-                    Console.WriteLine("Controllo se la lettera " + par + " è presente...");
+                    Console.WriteLine("Controllo se la lettera " + s.ToUpper() + " è presente...");
                     k = 0;
                     foreach (char c in arr)
                     {
@@ -52,12 +52,12 @@ namespace ImpiccatoConsoleServer
                 {
                     if (s == "Exit1")
                     {
-                        Console.WriteLine("Complimenti hai vinto! Arrivederci!\n");
+                        Console.WriteLine("\nComplimenti hai vinto! Arrivederci!\n");
                         gioco=false;
                     }
                     else if (s == "Exit0")
                     {
-                        Console.WriteLine("Mi dispiace hai perso, la parola era " + parola+". Arrivederci!\n");
+                        Console.WriteLine("\nHai perso, la parola era " + parola+". Arrivederci!\n");
                         gioco = false;
                     }
                     else if(s.ToUpper()==parola)

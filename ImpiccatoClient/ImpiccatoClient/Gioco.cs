@@ -17,16 +17,15 @@ namespace ImpiccatoClient
         SocketClient client;
         Parola parola;
         Thread t1;
-        bool vincita;
         public Gioco(ref SocketClient client, ref Parola parola)
         {
             InitializeComponent();
             this.client = client;
             this.parola = parola;
-            vincita = false;
             t1 = new Thread(new ThreadStart(client.ReceiveMsg));
             t1.Start();
             domUpLettera.SelectedIndex = 0;
+            label1.Text= "Connesso a: " + client.ConnTo();
         }
 
         private void btnInviaLett_Click(object sender, EventArgs e)
@@ -38,10 +37,9 @@ namespace ImpiccatoClient
 
         private void FineGioco()
         {
-            t1.Abort();
             timer1.Stop();
             DialogResult dialogResult;
-            if (vincita)
+            if (parola.Indovinata)
             {
                dialogResult = MessageBox.Show("Hai vinto! Vuoi rigiocare?", "Fine partita", MessageBoxButtons.YesNo);
             }
@@ -51,7 +49,6 @@ namespace ImpiccatoClient
             }
             if (dialogResult == DialogResult.Yes)
             {
-                client.SendMsg("Exit0");
                 Application.Restart();
             }
             else if (dialogResult == DialogResult.No)
@@ -66,7 +63,6 @@ namespace ImpiccatoClient
             labelParola.Text = parola.p();
             if(parola.Indovinata)
             {
-                vincita = true;
                 FineGioco();                
             }
             err = parola.Errori + 1;
@@ -81,7 +77,8 @@ namespace ImpiccatoClient
 
         private void Gioco_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if(vincita)
+            t1.Abort();
+            if(parola.Indovinata)
                 client.SendMsg("Exit1");
             else
                 client.SendMsg("Exit0");
@@ -91,7 +88,10 @@ namespace ImpiccatoClient
 
         private void btnInviaPar_Click(object sender, EventArgs e)
         {
-            client.SendMsg(txtParola.Text);
+            if (txtParola.Text.Length > 1)
+                client.SendMsg(txtParola.Text);
+            else
+                MessageBox.Show("Parola non valida");
         }
     }
 }
