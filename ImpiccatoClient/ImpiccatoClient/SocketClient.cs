@@ -84,7 +84,11 @@ namespace ImpiccatoClient
                     }
 
                 }
-                parola.AggiornaParola(data.Substring(0, data.Length - 5));
+                if (data.Substring(0, data.Length - 5) == "Ok")
+                    parola.Indovinata = true;
+                else if (data.Substring(0, data.Length - 5) != "No")                
+                    parola.AggiornaParola(data.Substring(0, data.Length - 5));
+                
             }
         }
 

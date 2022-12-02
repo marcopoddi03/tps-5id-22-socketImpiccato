@@ -34,11 +34,29 @@ namespace ImpiccatoClient
             domUpLettera.DownButton();
         }
 
-        private void FineGioco()
+        private void FineGioco(bool vinto)
         {
-            t1.Abort();
-            client.SendMsg("Exit");
+            t1.Abort();            
             timer1.Stop();
+            DialogResult dialogResult;
+            if (vinto)
+            {
+                client.SendMsg("Exit1");
+                dialogResult = MessageBox.Show("Hai vinto! Vuoi rigiocare?", "Fine partita", MessageBoxButtons.YesNo);
+            }
+            else
+            {
+                client.SendMsg("Exit0");
+                dialogResult = MessageBox.Show("Hai perso! Vuoi rigiocare?", "Fine partita", MessageBoxButtons.YesNo);
+            }
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Restart();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                Application.Exit();
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -47,17 +65,7 @@ namespace ImpiccatoClient
             labelParola.Text = parola.p();
             if(parola.Indovinata)
             {
-                FineGioco();
-                DialogResult dialogResult = MessageBox.Show("Hai vinto! Vuoi rigiocare?", "Fine partita", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    Application.Restart();
-                }
-                else if (dialogResult == DialogResult.No)
-                {                    
-                    Application.Exit();
-                }
-                
+                FineGioco(true);                
             }
             err = parola.e() + 1;
             if(err<10)
@@ -65,16 +73,7 @@ namespace ImpiccatoClient
             else
             {
                 pictureBox1.Image = Image.FromFile("./img/impiccato" + err.ToString() + ".jpg");
-                FineGioco();
-                DialogResult dialogResult = MessageBox.Show("Hai perso! Vuoi rigiocare?", "Fine partita", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    Application.Restart();
-                }
-                else if (dialogResult == DialogResult.No)
-                {
-                    Application.Exit();
-                }
+                FineGioco(false);
             }
         }
 

@@ -11,6 +11,7 @@ namespace ImpiccatoConsoleServer
             SocketServer server = new SocketServer();
             string parola;
             Random rnd = new Random();
+            bool gioco = true;
             StreamReader sr = new StreamReader("parole.txt");
             string line;
             Console.WriteLine("SERVER GIOCO DELL'IMPICCATO");
@@ -28,28 +29,44 @@ namespace ImpiccatoConsoleServer
             string par;
             string s;
             int k;
-            while(true)
+            while(gioco)
             {
-                Console.WriteLine("\nAspetto lettere...");
+                Console.WriteLine("\nAspetto lettera o parola...");
                 par = "";
                 s = server.ReceiveMsg();
-                if(s=="Exit")
+                if(s.Length==1)
                 {
-                    server.endSocket();
-                    Console.WriteLine("Fine partita! Client disconnesso. Premi un tasto per uscire...");
-                    Console.ReadKey();
-                    break;
+                    par = par + Convert.ToChar(s.ToUpper());
+                    Console.WriteLine("Controllo se la lettera " + par + " è presente...");
+                    k = 0;
+                    foreach (char c in arr)
+                    {
+                        if (c == Convert.ToChar(s.ToUpper()))
+                            par = par + k.ToString();
+                        k++;
+                    }
+                    server.SendMsg(par);
                 }
-                par = par + Convert.ToChar(s.ToUpper());
-                Console.WriteLine("Controllo se la lettera "+par+" è presente...");
-                k = 0;
-                foreach(char c in arr)
+                else
                 {
-                    if (c == Convert.ToChar(s.ToUpper()))
-                         par = par + k.ToString(); 
-                     k++;
-                }                
-                server.SendMsg(par);
+                    if (s == "Exit")
+                    {
+                        server.endSocket();
+                        Console.WriteLine("Fine partita! Arrivederci!\n");
+                        gioco=false;
+                    }
+                    else if(s.ToUpper()==parola)
+                    {
+                        server.SendMsg("Ok");
+                    }
+                    else
+                    {
+                        server.SendMsg("No");
+                    }
+                    
+                }
+                
+                
                 Console.WriteLine("Risultato mandato");
 
             }

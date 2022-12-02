@@ -29,9 +29,10 @@ namespace ImpiccatoClient
         {
             return nErrori;
         }
-        public bool v()
+        public bool Indovinata
         {
-            return indovinata;
+            get { return indovinata; }
+            set { indovinata = value; }     
         }
         public void l(int l)
         {

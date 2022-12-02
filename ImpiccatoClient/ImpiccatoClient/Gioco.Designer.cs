@@ -35,12 +35,14 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtParola = new System.Windows.Forms.TextBox();
+            this.btnInviaPar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnInviaLett
             // 
-            this.btnInviaLett.Location = new System.Drawing.Point(383, 181);
+            this.btnInviaLett.Location = new System.Drawing.Point(408, 144);
             this.btnInviaLett.Name = "btnInviaLett";
             this.btnInviaLett.Size = new System.Drawing.Size(71, 24);
             this.btnInviaLett.TabIndex = 5;
@@ -76,7 +78,7 @@
             this.domUpLettera.Items.Add("X");
             this.domUpLettera.Items.Add("Y");
             this.domUpLettera.Items.Add("Z");
-            this.domUpLettera.Location = new System.Drawing.Point(383, 155);
+            this.domUpLettera.Location = new System.Drawing.Point(408, 118);
             this.domUpLettera.Name = "domUpLettera";
             this.domUpLettera.ReadOnly = true;
             this.domUpLettera.Size = new System.Drawing.Size(71, 20);
@@ -99,7 +101,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(509, 73);
+            this.pictureBox1.Location = new System.Drawing.Point(532, 77);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 214);
             this.pictureBox1.TabIndex = 8;
@@ -115,12 +117,31 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "GIOCO DELL\'IMPICCATO";
             // 
+            // txtParola
+            // 
+            this.txtParola.Location = new System.Drawing.Point(367, 201);
+            this.txtParola.Name = "txtParola";
+            this.txtParola.Size = new System.Drawing.Size(112, 20);
+            this.txtParola.TabIndex = 10;
+            // 
+            // btnInviaPar
+            // 
+            this.btnInviaPar.Location = new System.Drawing.Point(408, 227);
+            this.btnInviaPar.Name = "btnInviaPar";
+            this.btnInviaPar.Size = new System.Drawing.Size(71, 23);
+            this.btnInviaPar.TabIndex = 11;
+            this.btnInviaPar.Text = "INVIA";
+            this.btnInviaPar.UseVisualStyleBackColor = true;
+            this.btnInviaPar.Click += new System.EventHandler(this.btnInviaPar_Click);
+            // 
             // Gioco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(667, 322);
+            this.Controls.Add(this.btnInviaPar);
+            this.Controls.Add(this.txtParola);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelParola);
@@ -143,5 +164,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtParola;
+        private System.Windows.Forms.Button btnInviaPar;
     }
 }
